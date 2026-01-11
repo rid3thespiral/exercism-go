@@ -1,0 +1,46 @@
+package blackjack
+
+import "fmt"
+
+// ParseCard returns the integer value of a card following blackjack ruleset.
+func ParseCard(card string) int {
+	switch {
+	case card == "ace":
+		return 11
+	case card == "jack" || card == "queen" || card == "king":
+		return 10
+	case card == "two":
+		return 2
+	case card == "three":
+		return 3
+	case card == "five":
+		return 5
+	case card == "six":
+		return 6
+	case card == "seven":
+		return 7
+	case card == "eight":
+		return 8
+	case card == "nine":
+		return 9
+	case card == "four":
+		return 4
+	case card == "ten":
+		return 10
+	default:
+		return 0
+	}
+}
+
+// FirstTurn returns the decision for the first turn, given two cards of the
+// player and one card of the dealer.
+func FirstTurn(card1, card2, dealerCard string) string {
+	copySlice()
+	return "h"
+}
+
+func copySlice() {
+	var app []int = []int{1, 2, 3}
+	app2 := append(app, 1, 2, 3)
+	fmt.Println(app2)
+}
